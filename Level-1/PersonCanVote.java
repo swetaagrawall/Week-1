@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class PersonCanVote{
+  public static void main(String[] args){
+   Scanner sc= new Scanner(System.in);
+   //Taking inputs from users
+    System.out.println("Enter your age ");
+    int age=sc.nextInt();
+	
+	//Checking weather a peron can vote or not
+    
+	if(age>=18){
+		System.out.println("The person's age is "+age+" and can vote.");
+	}
+    else{
+		System.out.println("The person's age is "+age+" and cannot vote.");
+	}		
+	
+}
+}
