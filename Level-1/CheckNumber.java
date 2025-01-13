@@ -1,42 +1,32 @@
 import java.util.Scanner;
-
-public class CheckNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-		//creating an array
-		int arr[]= new int[5];
-        //Taking inputs from user
-		System.out.println("Enter the 5 numbers");
-		for(int i=0 ;i<5;i++){
-			arr[i]=sc.nextInt();
-			
-		}
-		//Implementing Logic
-		for(int i=0 ;i<5;i++){
-			if(arr[i]<0){
-				System.out.println("The number "+arr[i]+" is a negative number.");
-			}
-			else if(arr[i]==0){
-				System.out.println("The number "+arr[i]+" is zero");
-			}
-			else{
-				if(arr[i]%2==0){
-				   System.out.println("The number "+arr[i]+" is an even number.");
-			   }
-			   else if(arr[i]==0){
-				System.out.println("The number "+arr[i]+" is an odd number");
-			}
-			}
-			
-		}
-		//Finally checking the fisrt and last number
-		if(arr[0]==arr[arr.length-1]){
-			System.out.println("The First and last number are equal");
-			   }
-			   else {
-				System.out.println("The First and last number are not equal");
-			}
-		
+public class CheckNumber{
+	//defining method to chcek number
+	public int checkNumber(int number){
+		if(number>0) //positive
+		return 1;
+		if(number<0) //negative
+		return -1;
+		else		 //zero
 	
-    }
+		return 0;
+	}
+	//main() method
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		//taking input from user
+		System.out.print("Enter a number ");
+		int number=sc.nextInt();
+		CheckNumber c=new CheckNumber();
+		int ans=c.checkNumber(number);
+		//printing the output
+		if(ans==-1)
+		System.out.println("Number "+number+" is negative.");
+		else if(ans==1)
+		System.out.println("Number "+number+" is positive.");
+		else
+		System.out.println("Number "+number+" is zero.");
+		sc.close();
+	}
 }
+		
+		
