@@ -1,33 +1,29 @@
 import java.util.Scanner;
-public class GenerateArrayIndexOutOfBoundsException
-{
+public class GenerateArrayIndexOutOfException{
 	
-	//defining method for computing simple interest
-	public void generateArrayIndexOutOfBoundsException(int[] array , int index){
-		array =new int[5];
+	 public static void generateArrayIndexOutOfException(String array[],int index) {       
+	  //generate Array Index ot of Bound Exception
+		String result = array[index];
+		System.out.println(result);
+	  
+    }
+	
+	public static void main(String [] args){
+		
+		//Take inputs
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Array elements : ");
+		String array []= new  String[5];
+		for(int i=0 ;i<array.length;i++ )
+		{
+		 array[i] = sc.next();
+		}
+		System.out.println("EnterIndex : ");
+		int index = sc.nextInt();
 		try{
-			array[index];
-		}catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("ArrayIndexOutOfBoundsException is occured and handled");
+			generateArrayIndexOutOfException(array ,index);
+		}catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println("(Array Index Out Of Bounds Exception is generated ");
 		}
-		
-	}
-	
-	
-	
-	//main() method
-	public static void main(String[]args){
-		Scanner sc=new Scanner(System.in);
-		//taking input
-		int array[]= new array[5];
-		for(int i=0 ;i<5 ;i++){
-			array[i]=sc.nextInt();
-		}
-		
-		int index=sc.nextInt();
-		GenerateArrayIndexOutOfBoundsException cs=new GenerateArrayIndexOutOfBoundsException(array , index);
-		cs.generateArrayIndexOutOfBoundsException(string);
-		
-		sc.close();
 	}
 }
